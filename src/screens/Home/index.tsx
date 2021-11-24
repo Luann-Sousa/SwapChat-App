@@ -4,7 +4,7 @@ import { View, Text } from 'react-native';
 export function HomeScreen() {
   return (
     <View>
-      <Text> Welcome Screen Home ! </Text>
+      <Text style={{ fontFamily: 'Roboto_400Regular', fontSize: 40 }}>Welcome Screen Home !</Text>
     </View>
   );
 }

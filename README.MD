@@ -11,3 +11,14 @@ sua máquina localmente.</br>
 ## APLICAÇÃO PARA COMUNICAÇÕES.</br>
 
 [*] -> usuário só poderá entrar no sistema se estiver cadastro em nosso aplicativo.</br>
+
+## FERRAMENTAS UTILIZADAS NO PROJETO.
+
+1 -> Para usarmos font do Googlefonts
+---> expo install expo-font.
+2 -> Isso é útil para baixar e armazenar em cache fontes, logotipos, imagens de ícones e outros ativos que você
+deseja garantir que o usuário tenha em seu dispositivo para uma experiência ideal.
+---> expo install expo-app-loading.
+3 -> Expo oferece suporte de primeira classe para todas as fontes listadas no Google Fonts . Para usar um deles, dê
+uma olhada no projeto Expo Google Fonts . Com esses pacotes, você pode integrar rapidamente qualquer fonte ou variantes de fonte.
+---> expo install expo-font @expo-google-fonts/roboto
