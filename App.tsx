@@ -2,6 +2,7 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import AppLoading from 'expo-app-loading';
+import { ThemeProvider } from 'styled-components';
 import {
   useFonts,
   Roboto_300Light,
@@ -11,6 +12,7 @@ import {
   Roboto_900Black,
 } from '@expo-google-fonts/roboto';
 import { StyleSheet, View } from 'react-native';
+import theme from './src/hooks/colors/theme';
 
 import { HomeScreen } from './src/screens/Home';
 
@@ -37,11 +39,11 @@ export default function App() {
   }
 
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <View style={styles.container}>
         <StatusBar translucent />
         <HomeScreen />
       </View>
-    </>
+    </ThemeProvider>
   );
 }

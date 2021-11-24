@@ -12,13 +12,16 @@ sua máquina localmente.</br>
 
 [*] -> usuário só poderá entrar no sistema se estiver cadastro em nosso aplicativo.</br>
 
-## FERRAMENTAS UTILIZADAS NO PROJETO.
+## FERRAMENTAS UTILIZADAS NO PROJETO.</br>
 
-1 -> Para usarmos font do Googlefonts
----> expo install expo-font.
+1 -> Para usarmos font do Googlefonts</br>
+---> expo install expo-font.</br>
 2 -> Isso é útil para baixar e armazenar em cache fontes, logotipos, imagens de ícones e outros ativos que você
-deseja garantir que o usuário tenha em seu dispositivo para uma experiência ideal.
----> expo install expo-app-loading.
+deseja garantir que o usuário tenha em seu dispositivo para uma experiência ideal.</br>
+---> expo install expo-app-loading.</br>
 3 -> Expo oferece suporte de primeira classe para todas as fontes listadas no Google Fonts . Para usar um deles, dê
-uma olhada no projeto Expo Google Fonts . Com esses pacotes, você pode integrar rapidamente qualquer fonte ou variantes de fonte.
----> expo install expo-font @expo-google-fonts/roboto
+uma olhada no projeto Expo Google Fonts . Com esses pacotes, você pode integrar rapidamente qualquer fonte ou variantes de fonte.</br>
+---> expo install expo-font @expo-google-fonts/roboto.</br>
+4 -> Para trabalharmos com mais praticidades em nosso estilos vamos usar o "styled-components".</br>
+---> yarn add styled-components.</br>
+---> yarn add @types/styled-components -D.</br>
