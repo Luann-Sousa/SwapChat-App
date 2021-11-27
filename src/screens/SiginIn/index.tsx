@@ -20,6 +20,10 @@ export function SiginInScreen() {
       <WrapperMain>
         <Title>Conecte-se com seus{'\n'} Com seus amigos(a)</Title>
       </WrapperMain>
+
+      <WrapperLogo>
+        <ImageLogo source={require('../../assets/images/logo.png')} />
+      </WrapperLogo>
     </Container>
   );
 }

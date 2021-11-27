@@ -12,8 +12,11 @@ export const WrapperMain = styled.View`
   padding: 24px;
 `;
 export const Title = styled.Text`
+  font-family: ${({ theme }) => theme.fonts.primary_robot_bold};
   color: ${({ theme }) => theme.colors.title};
   font-size: 24px;
+
+  margin-bottom: 32px;
 `;
 
 export const WrapperLogo = styled.View`
