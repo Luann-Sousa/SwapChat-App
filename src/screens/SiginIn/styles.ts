@@ -15,3 +15,14 @@ export const Title = styled.Text`
   color: ${({ theme }) => theme.colors.title};
   font-size: 24px;
 `;
+
+export const WrapperLogo = styled.View`
+  width: 100%;
+
+  align-items: center;
+  justify-content: center;
+`;
+export const ImageLogo = styled.Image`
+  width: 150px;
+  height: 150px;
+`;

@@ -3,7 +3,14 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
 
-import { Container, Title, ImageHeader, WrapperMain } from './styles';
+import {
+  Container,
+  Title,
+  ImageHeader,
+  WrapperMain,
+  WrapperLogo,
+  ImageLogo,
+} from './styles';
 
 export function SiginInScreen() {
   return (
