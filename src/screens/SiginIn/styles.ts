@@ -50,3 +50,20 @@ export const Input = styled.TextInput`
   padding: 0px 0px 0px 16px;
   margin-bottom: 20px;
 `;
+
+export const WrapperFotterButton = styled.View`
+  margin-bottom: 10px;
+`;
+export const WrapperFotterForgetPassword = styled.TouchableOpacity`
+  width: 100%;
+
+  align-items: center;
+  justify-content: center;
+`;
+
+export const TextForgerPassowrd = styled.Text`
+  font-family: ${({ theme }) => theme.fonts.primary_robot_bold};
+  color: ${({ theme }) => theme.colors.title};
+
+  font-size: 14px;
+`;

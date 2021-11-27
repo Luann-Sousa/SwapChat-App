@@ -2,6 +2,7 @@
 /* eslint-disable react/jsx-curly-brace-presence */
 /* eslint-disable prettier/prettier */
 import React from 'react';
+import { Buttonn } from '../../components/Button/index';
 
 import {
   Container,
@@ -13,6 +14,9 @@ import {
   ImageLogo,
   WrapperInput,
   Input,
+  WrapperFotterButton,
+  WrapperFotterForgetPassword,
+  TextForgerPassowrd,
 } from './styles';
 
 export function SiginInScreen() {
@@ -33,6 +37,14 @@ export function SiginInScreen() {
           <Input placeholder="username ou e-mail" />
           <Input placeholder="senha" />
         </WrapperInput>
+
+        <WrapperFotterButton>
+          <Buttonn title="ENTRAR" />
+        </WrapperFotterButton>
+
+        <WrapperFotterForgetPassword>
+          <TextForgerPassowrd>ESQUECEU A SENHA</TextForgerPassowrd>
+        </WrapperFotterForgetPassword>
       </Main>
     </Container>
   );
