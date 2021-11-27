@@ -8,9 +8,14 @@ export const ImageHeader = styled.Image`
   width: 420px;
   height: 179px;
 `;
-export const WrapperMain = styled.View`
+
+export const Main = styled.View`
+  width: 100%;
+
   padding: 24px;
 `;
+
+export const WrapperMain = styled.View``;
 export const Title = styled.Text`
   font-family: ${({ theme }) => theme.fonts.primary_robot_bold};
   color: ${({ theme }) => theme.colors.title};
@@ -24,8 +29,24 @@ export const WrapperLogo = styled.View`
 
   align-items: center;
   justify-content: center;
+
+  margin-bottom: 62px;
 `;
 export const ImageLogo = styled.Image`
   width: 150px;
   height: 150px;
+`;
+
+export const WrapperInput = styled.View`
+  width: 100%;
+`;
+export const Input = styled.TextInput`
+  width: 100%;
+  height: 50px;
+
+  border: 1px solid ${({ theme }) => theme.colors.border};
+  border-radius: 8px;
+
+  padding: 0px 0px 0px 16px;
+  margin-bottom: 20px;
 `;
