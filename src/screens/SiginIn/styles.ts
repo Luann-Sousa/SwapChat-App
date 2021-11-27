@@ -16,12 +16,14 @@ export const Main = styled.View`
 `;
 
 export const WrapperMain = styled.View``;
+
 export const Title = styled.Text`
   font-family: ${({ theme }) => theme.fonts.primary_robot_bold};
   color: ${({ theme }) => theme.colors.title};
   font-size: 24px;
 
   margin-bottom: 32px;
+  margin-top: -40px;
 `;
 
 export const WrapperLogo = styled.View`
@@ -66,4 +68,13 @@ export const TextForgerPassowrd = styled.Text`
   color: ${({ theme }) => theme.colors.title};
 
   font-size: 14px;
+`;
+
+export const WrapperFooter = styled.View`
+  width: 100%;
+`;
+
+export const ImageFooter = styled.Image`
+  width: 420px;
+  height: 179px;
 `;

@@ -17,6 +17,8 @@ import {
   WrapperFotterButton,
   WrapperFotterForgetPassword,
   TextForgerPassowrd,
+  WrapperFooter,
+  ImageFooter,
 } from './styles';
 
 export function SiginInScreen() {
@@ -46,6 +48,9 @@ export function SiginInScreen() {
           <TextForgerPassowrd>ESQUECEU A SENHA</TextForgerPassowrd>
         </WrapperFotterForgetPassword>
       </Main>
+      <WrapperFooter>
+        <ImageFooter source={require('../../assets/images/footer.png')} />
+      </WrapperFooter>
     </Container>
   );
 }
