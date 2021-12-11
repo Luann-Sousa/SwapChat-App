@@ -3,7 +3,7 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
 import { Buttonn } from '../../components/Button/index';
-
+import LogoSVG from '../../assets/images/logo.svg';
 import {
   Container,
   Title,
@@ -11,7 +11,6 @@ import {
   Main,
   WrapperMain,
   WrapperLogo,
-  ImageLogo,
   WrapperInput,
   Input,
   WrapperFotterButton,
@@ -32,7 +31,7 @@ export function SiginInScreen() {
         </WrapperMain>
 
         <WrapperLogo>
-          <ImageLogo source={require('../../assets/images/logo.png')} />
+          <LogoSVG width={150} height={150}/>
         </WrapperLogo>
 
         <WrapperInput>

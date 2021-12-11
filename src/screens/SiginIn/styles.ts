@@ -34,10 +34,6 @@ export const WrapperLogo = styled.View`
 
   margin-bottom: 62px;
 `;
-export const ImageLogo = styled.Image`
-  width: 150px;
-  height: 150px;
-`;
 
 export const WrapperInput = styled.View`
   width: 100%;
