@@ -15,6 +15,7 @@ import { StyleSheet, View } from 'react-native';
 import theme from './src/hooks/colors/theme';
 
 import { SiginInScreen } from './src/screens/SiginIn';
+import { AppRoutes } from './src/routes';
 
 const styles = StyleSheet.create({
   container: {
@@ -40,10 +41,7 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <View style={styles.container}>
-        <StatusBar translucent />
-        <SiginInScreen />
-      </View>
+      <AppRoutes />
     </ThemeProvider>
   );
 }
