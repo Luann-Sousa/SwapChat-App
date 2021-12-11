@@ -8,13 +8,13 @@ const Stack = createStackNavigator();
 export function RoutesAuthenticate() {
   return (
     <Stack.Navigator
-      initialRouteName="Signin"
+      initialRouteName="Login"
       screenOptions={{
         headerShown: false,
       }}
     >
-      <Stack.Screen name="Signin" component={SiginInScreen} />
       <Stack.Screen name="Login" component={LoginScreen} />
+      <Stack.Screen name="Signin" component={SiginInScreen} />
     </Stack.Navigator>
   );
 }

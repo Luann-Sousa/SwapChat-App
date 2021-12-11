@@ -2,6 +2,7 @@
 /* eslint-disable react/jsx-curly-brace-presence */
 /* eslint-disable prettier/prettier */
 import React from 'react';
+import { useNavigation } from '@react-navigation/native';
 import { Buttonn } from '../../components/Button/index';
 import LogoSVG from '../../assets/images/logo.svg';
 import {
@@ -9,12 +10,14 @@ import {
   ImageHeader,
   Main,
   WrapperLogo,
+  WrapperButtons,
   WrapperFotterButton,
   WrapperFooter,
   ImageFooter,
 } from './styles';
 
 export function LoginScreen() {
+  const navigation = useNavigation();
   return (
     <Container>
       <ImageHeader source={require('../../assets/images/header.png')} />
@@ -26,10 +29,16 @@ export function LoginScreen() {
           <LogoSVG width={150} height={150}/>
         </WrapperLogo>
 
+    <WrapperButtons>
+
+    <WrapperFotterButton>
+          <Buttonn title="Signin in" onPress={()=> navigation.navigate("Signin")}/>
+        </WrapperFotterButton>
 
         <WrapperFotterButton>
-          <Buttonn title="Signin in" />
+          <Buttonn title="Signin up" />
         </WrapperFotterButton>
+    </WrapperButtons>
 
 
       </Main>

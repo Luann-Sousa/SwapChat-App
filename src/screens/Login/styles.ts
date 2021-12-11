@@ -23,6 +23,10 @@ export const WrapperLogo = styled.View`
 
   margin-bottom: 62px;
 `;
+export const WrapperButtons = styled.View`
+  margin-bottom: 20px;
+  margin-top: 30px;
+`;
 
 export const WrapperFotterButton = styled.View`
   margin-bottom: 10px;
