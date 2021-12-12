@@ -20,13 +20,17 @@ function SettingsScreen() {
   );
 }
 
-const Tab = createBottomTabNavigator();
+const BottomTabs = createBottomTabNavigator();
 
 export function BottomTabsRoutes() {
   return (
-    <Tab.Navigator>
-      <Tab.Screen name="Home" component={HomeScreen} />
-      <Tab.Screen name="Settings" component={SettingsScreen} />
-    </Tab.Navigator>
+    <BottomTabs.Navigator
+      screenOptions={{
+        headerShown: false,
+      }}
+    >
+      <BottomTabs.Screen name="Home" component={HomeScreen} />
+      <BottomTabs.Screen name="Settings" component={SettingsScreen} />
+    </BottomTabs.Navigator>
   );
 }
