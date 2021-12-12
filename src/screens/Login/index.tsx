@@ -39,7 +39,7 @@ export function LoginScreen() {
         </WrapperFotterButton>
 
         <WrapperFotterButton>
-              <Buttonn title="Signin up" />
+              <Buttonn title="Signin up"  onPress={()=> navigation.navigate("SignInUpScreen")}/>
         </WrapperFotterButton>
     </WrapperButtons>
 
