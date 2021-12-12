@@ -1,11 +1,16 @@
 import React from 'react';
-import { Container, Title } from './styles';
+import { ContainerMain, ContainerProfile, WrapperHeader, Title } from './styles';
 import ProfileSVG from '../../assets/images/profile.svg';
 
 export function Profile() {
   return (
-    <Container>
-      <Title>Oi Programador !</Title>
-    </Container>
+    <ContainerMain>
+      <WrapperHeader>
+        <ContainerProfile>
+          <ProfileSVG width={70} height={70} />
+        </ContainerProfile>
+        <Title>Dê um Match</Title>
+      </WrapperHeader>
+    </ContainerMain>
   );
 }

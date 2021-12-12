@@ -1,12 +1,51 @@
 import React from 'react';
-import { Container, Title } from './styles';
+import {
+  Container,
+  Title,
+  ContainerImageMacth,
+  ImageMacth,
+  ContainerOption,
+  Reload,
+  ReloadMatch,
+} from './styles';
 import { Profile } from '../../components/Profile';
+import JovenProfileSVG from '../../assets/images/joven1.png';
+import ReloadSVG from '../../assets/images/reload.svg';
+import CancelSVG from '../../assets/images/cancel.svg';
+import MatchlSVG from '../../assets/images/match.svg';
+import StarSVG from '../../assets/images/star.svg';
 
 export function MatchScreen() {
   return (
-    <Container>
+    <>
       <Profile />
-      <Title>Welcome is Screen MatchScreen !</Title>
-    </Container>
+      <Container>
+        <ContainerImageMacth>
+          <ImageMacth source={JovenProfileSVG} />
+        </ContainerImageMacth>
+
+        <ContainerOption>
+          <Reload>
+            <ReloadSVG width={24} height={24} />
+          </Reload>
+
+          <Reload>
+            <CancelSVG width={18} height={18} />
+          </Reload>
+
+          <ReloadMatch>
+            <MatchlSVG width={30} height={30} />
+          </ReloadMatch>
+
+          <Reload>
+            <StarSVG width={24} height={24} />
+          </Reload>
+
+          <Reload>
+            <ReloadSVG width={24} height={24} />
+          </Reload>
+        </ContainerOption>
+      </Container>
+    </>
   );
 }
