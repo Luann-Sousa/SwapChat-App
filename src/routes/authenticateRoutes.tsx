@@ -3,7 +3,12 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { SiginInScreen } from '../screens/SiginIn';
 import { LoginScreen } from '../screens/Login';
 
-const Stack = createStackNavigator();
+export type ScreenStackParamList = {
+  Login: undefined;
+  SigninScreen: undefined;
+};
+
+const Stack = createStackNavigator<ScreenStackParamList>();
 
 export function RoutesAuthenticate() {
   return (
@@ -14,7 +19,7 @@ export function RoutesAuthenticate() {
       }}
     >
       <Stack.Screen name="Login" component={LoginScreen} />
-      <Stack.Screen name="Signin" component={SiginInScreen} />
+      <Stack.Screen name="SigninScreen" component={SiginInScreen} />
     </Stack.Navigator>
   );
 }

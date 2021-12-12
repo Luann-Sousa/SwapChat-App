@@ -3,6 +3,8 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
 import { useNavigation } from '@react-navigation/native';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { ScreenStackParamList } from '../../routes/authenticateRoutes';
 import { Buttonn } from '../../components/Button/index';
 import LogoSVG from '../../assets/images/logo.svg';
 import {
@@ -16,8 +18,9 @@ import {
   ImageFooter,
 } from './styles';
 
+type SigninScreenStackProps = NativeStackNavigationProp<ScreenStackParamList, 'SigninScreen'>
 export function LoginScreen() {
-  const navigation = useNavigation();
+  const navigation = useNavigation<SigninScreenStackProps>();
   return (
     <Container>
       <ImageHeader source={require('../../assets/images/header.png')} />
@@ -31,12 +34,12 @@ export function LoginScreen() {
 
     <WrapperButtons>
 
-    <WrapperFotterButton>
-          <Buttonn title="Signin in" onPress={()=> navigation.navigate("Signin")}/>
+        <WrapperFotterButton>
+              <Buttonn title="Signin in" onPress={()=> navigation.navigate("SigninScreen")}/>
         </WrapperFotterButton>
 
         <WrapperFotterButton>
-          <Buttonn title="Signin up" />
+              <Buttonn title="Signin up" />
         </WrapperFotterButton>
     </WrapperButtons>
 

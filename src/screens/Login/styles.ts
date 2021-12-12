@@ -20,16 +20,14 @@ export const WrapperLogo = styled.View`
 
   align-items: center;
   justify-content: center;
-
-  margin-bottom: 62px;
 `;
 export const WrapperButtons = styled.View`
   margin-bottom: 20px;
-  margin-top: 30px;
+  margin-top: 120px;
 `;
 
 export const WrapperFotterButton = styled.View`
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 `;
 
 export const WrapperFooter = styled.View`
