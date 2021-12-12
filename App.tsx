@@ -1,3 +1,4 @@
+/* eslint-disable react/style-prop-object */
 /* eslint-disable camelcase */
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
@@ -11,20 +12,9 @@ import {
   Roboto_700Bold,
   Roboto_900Black,
 } from '@expo-google-fonts/roboto';
-import { StyleSheet, View } from 'react-native';
 import theme from './src/hooks/colors/theme';
 
-import { SiginInScreen } from './src/screens/SiginIn';
 import { AppRoutes } from './src/routes';
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
 
 export default function App() {
   const [robotoFontsLoaded] = useFonts({
@@ -41,6 +31,7 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
+      <StatusBar style="dark" />
       <AppRoutes />
     </ThemeProvider>
   );
