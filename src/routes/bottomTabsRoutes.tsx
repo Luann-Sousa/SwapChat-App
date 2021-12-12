@@ -3,6 +3,8 @@ import * as React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { MaterialIcons } from '@expo/vector-icons';
+import FriendsSVG from '../assets/icon/friends.svg';
 
 function HomeScreen() {
   return (
@@ -29,8 +31,20 @@ export function BottomTabsRoutes() {
         headerShown: false,
       }}
     >
-      <BottomTabs.Screen name="Home" component={HomeScreen} />
-      <BottomTabs.Screen name="Settings" component={SettingsScreen} />
+      <BottomTabs.Screen
+        name="Home"
+        component={HomeScreen}
+        options={{
+          tabBarIcon: ({ size, color }) => <MaterialIcons name="home" size={size} color={color} />,
+        }}
+      />
+      <BottomTabs.Screen
+        name="Friends"
+        component={SettingsScreen}
+        options={{
+          tabBarIcon: () => <FriendsSVG width={24} height={24} />,
+        }}
+      />
     </BottomTabs.Navigator>
   );
 }
