@@ -3,8 +3,10 @@ import * as React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { MaterialIcons } from '@expo/vector-icons';
 import FriendsSVG from '../assets/icon/friends.svg';
+import ChatbubbleSVG from '../assets/icon/chatbubble.svg';
 import { MatchScreen } from '../screens/Match';
 import { FriendsScreen } from '../screens/Friends';
+import { ChatAll } from '../screens/ChatAll';
 
 const BottomTabs = createBottomTabNavigator();
 
@@ -23,7 +25,15 @@ export function BottomTabsRoutes() {
         }}
       />
       <BottomTabs.Screen
-        name="Friends"
+        name="Conversas"
+        component={FriendsScreen}
+        options={{
+          tabBarIcon: () => <ChatbubbleSVG width={24} height={24} />,
+        }}
+      />
+
+      <BottomTabs.Screen
+        name="Amigos"
         component={FriendsScreen}
         options={{
           tabBarIcon: () => <FriendsSVG width={24} height={24} />,

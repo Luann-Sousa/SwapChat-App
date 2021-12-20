@@ -7,7 +7,7 @@ export function Profile() {
     <ContainerMain>
       <WrapperHeader>
         <ContainerProfile>
-          <ProfileSVG width={70} height={70} />
+          <ProfileSVG width={48} height={48} />
         </ContainerProfile>
         <Title>Dê um Match</Title>
       </WrapperHeader>
