@@ -1,19 +1,20 @@
 import styled from 'styled-components/native';
 
 export const ContainerMain = styled.View`
-  margin-top: 35px;
+  margin-top: 30px;
   padding: 8px;
+  margin-left: 10px;
 `;
 
 export const ContainerProfile = styled.View`
   border: 1px solid #cdcdcd;
-  width: 70px;
-  height: 70px;
-  border-radius: 35px;
+  width: 48px;
+  height: 48px;
+  border-radius: 24px;
 `;
 
 export const WrapperHeader = styled.View`
-  width: 100%;
+  width: 90%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -23,7 +24,7 @@ export const Title = styled.Text`
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
-  font-size: 28px;
+  font-size: 26px;
   color: #403d3d;
-  margin-right: 100px;
+  margin-right: 40px;
 `;

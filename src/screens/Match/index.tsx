@@ -1,7 +1,10 @@
 import React from 'react';
 import {
+  Wrapper,
   Container,
   Title,
+  SubTitle,
+  WrapperLegend,
   ContainerImageMacth,
   ImageMacth,
   ContainerOption,
@@ -18,34 +21,41 @@ import StarSVG from '../../assets/images/star.svg';
 export function MatchScreen() {
   return (
     <>
-      <Profile />
-      <Container>
-        <ContainerImageMacth>
-          <ImageMacth source={JovenProfileSVG} />
-        </ContainerImageMacth>
+      <Wrapper>
+        <Profile />
+        <Container showsVerticalScrollIndicator={false}>
+          <ContainerImageMacth>
+            <ImageMacth source={JovenProfileSVG} />
 
-        <ContainerOption>
-          <Reload>
-            <ReloadSVG width={24} height={24} />
-          </Reload>
+            <WrapperLegend>
+              <Title>Priscilla, 24</Title>
+              <SubTitle>Consultora em atendimento Veterinario.</SubTitle>
+            </WrapperLegend>
+          </ContainerImageMacth>
 
-          <Reload>
-            <CancelSVG width={18} height={18} />
-          </Reload>
+          <ContainerOption>
+            <Reload>
+              <ReloadSVG width={24} height={24} />
+            </Reload>
 
-          <ReloadMatch>
-            <MatchlSVG width={30} height={30} />
-          </ReloadMatch>
+            <Reload>
+              <CancelSVG width={18} height={18} />
+            </Reload>
 
-          <Reload>
-            <StarSVG width={24} height={24} />
-          </Reload>
+            <ReloadMatch>
+              <MatchlSVG width={30} height={30} />
+            </ReloadMatch>
 
-          <Reload>
-            <ReloadSVG width={24} height={24} />
-          </Reload>
-        </ContainerOption>
-      </Container>
+            <Reload>
+              <StarSVG width={24} height={24} />
+            </Reload>
+
+            <Reload>
+              <ReloadSVG width={24} height={24} />
+            </Reload>
+          </ContainerOption>
+        </Container>
+      </Wrapper>
     </>
   );
 }
