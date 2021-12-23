@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 /* eslint-disable no-nested-ternary */
 import * as React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -21,12 +22,14 @@ export function BottomTabsRoutes() {
         name="Home"
         component={MatchScreen}
         options={{
-          tabBarIcon: ({ size, color }) => <MaterialIcons name="home" size={size} color={color} />,
+          tabBarIcon: ({ size, color }) => (
+            <MaterialIcons name="home" size={size} color={color} />
+          ),
         }}
       />
       <BottomTabs.Screen
         name="Conversas"
-        component={FriendsScreen}
+        component={ChatAll}
         options={{
           tabBarIcon: () => <ChatbubbleSVG width={24} height={24} />,
         }}
