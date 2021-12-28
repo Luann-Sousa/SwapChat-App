@@ -10,6 +10,7 @@ export const Wrapper = styled.View`
 
 export const Container = styled.ScrollView`
   width: 100%;
+  margin-top: 0px;
 `;
 
 export const ContainerImageMacth = styled.View`
@@ -19,8 +20,8 @@ export const ContainerImageMacth = styled.View`
 export const ImageMacth = styled.Image`
   width: 100%;
   border-radius: 10px;
-  height: 520px;
-  margin-top: 20px;
+  height: 550px;
+  margin-top: 10px;
 `;
 
 export const ContainerOption = styled.View`
@@ -71,7 +72,7 @@ export const SubTitle = styled.Text`
 
 export const WrapperLegend = styled.View`
   position: absolute;
-  margin-top: 380px;
+  margin-top: 400px;
   padding: 12px;
   width: 100%;
 `;

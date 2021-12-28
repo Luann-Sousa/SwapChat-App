@@ -1,16 +1,29 @@
 import React from 'react';
-import { ContainerMain, ContainerProfile, WrapperHeader, Title } from './styles';
+import {
+  Container,
+  Title,
+  WrapperHeader,
+  WrapperHeaderIcon,
+  ButtonIconPencil,
+  ButtonOnline,
+} from './styles';
 import ProfileSVG from '../../assets/images/profile.svg';
+import LogautSVG from '../../assets/icon/logaut.svg';
 
 export function Profile() {
   return (
-    <ContainerMain>
+    <Container>
       <WrapperHeader>
-        <ContainerProfile>
-          <ProfileSVG width={48} height={48} />
-        </ContainerProfile>
-        <Title>Dê um Match</Title>
+        <ProfileSVG width={56} height={56} />
+        <Title>Dê seu Match</Title>
       </WrapperHeader>
-    </ContainerMain>
+      <ButtonOnline />
+
+      <WrapperHeaderIcon>
+        <ButtonIconPencil>
+          <LogautSVG width={28} height={28} />
+        </ButtonIconPencil>
+      </WrapperHeaderIcon>
+    </Container>
   );
 }
