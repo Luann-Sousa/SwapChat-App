@@ -1,30 +1,62 @@
 import styled from 'styled-components/native';
 
-export const ContainerMain = styled.View`
+export const Container = styled.View`
   margin-top: 30px;
-  padding: 8px;
-  margin-left: 10px;
-`;
+  width: 100%;
+  height: 80px;
 
-export const ContainerProfile = styled.View`
-  border: 1px solid #cdcdcd;
-  width: 48px;
-  height: 48px;
-  border-radius: 24px;
+  /* border: 1px solid red; */
+
+  flex-direction: row;
+  /* align-items: center; */
+  justify-content: space-around;
 `;
 
 export const WrapperHeader = styled.View`
-  width: 90%;
-  display: flex;
+  margin-top: 10px;
+  width: 250px;
+  height: 60px;
+
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+
+  margin-right: 10px;
+  position: relative;
+`;
+
+export const WrapperHeaderIcon = styled.View`
+  margin-top: 10px;
+  width: 100px;
+  height: 60px;
+
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
 `;
 export const Title = styled.Text`
   font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 26px;
+
+  font-weight: 900;
+  font-size: 24px;
   color: #403d3d;
-  margin-right: 40px;
+  margin-left: 20px;
+`;
+
+export const ButtonIconPencil = styled.TouchableOpacity`
+  width: 28px;
+  height: 28px;
+
+  margin-left: 40px;
+`;
+
+export const ButtonOnline = styled.TouchableOpacity`
+  width: 15px;
+  height: 15px;
+
+  border-radius: 7px;
+
+  background-color: #7df420;
+  position: absolute;
+  margin-left: 42px;
+  margin-top: 52px;
 `;
