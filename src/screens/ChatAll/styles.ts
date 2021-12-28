@@ -7,3 +7,14 @@ export const Container = styled.ScrollView`
 `;
 
 export const Title = styled.Text``;
+
+export const WrapperSearchInput = styled.View`
+  margin-top: 15px;
+`;
+
+export const WrapperCardUsers = styled.View`
+  margin-top: 15px;
+  width: 100%;
+
+  flex-direction: row;
+`;
