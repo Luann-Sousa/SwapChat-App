@@ -20,7 +20,7 @@ export const ContainerImageMacth = styled.View`
 export const ImageMacth = styled.Image`
   width: 100%;
   border-radius: 10px;
-  height: 550px;
+  height: 520px;
   margin-top: 10px;
 `;
 
