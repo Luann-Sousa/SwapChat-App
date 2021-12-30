@@ -22,7 +22,7 @@ export function MatchScreen() {
   return (
     <>
       <Wrapper>
-        <Profile />
+        <Profile title="Dê seu Match" />
         <Container showsVerticalScrollIndicator={false}>
           <ContainerImageMacth>
             <ImageMacth source={JovenProfileSVG} />
