@@ -1,7 +1,7 @@
 import styled from 'styled-components/native';
 
 export const Container = styled.View`
-  border: 1px solid ${({ theme }) => theme.colors.header};
+  /* border: 1px solid ${({ theme }) => theme.colors.header}; */
   height: 89px;
 
   padding: 14px;
@@ -20,5 +20,13 @@ export const WrapperConversa = styled.View`
   width: 100%;
 `;
 
-export const Name = styled.Text``;
-export const Messeger = styled.Text``;
+export const Name = styled.Text`
+  font-family: ${({ theme }) => theme.fonts.primary_robot_bold};
+  color: ${({ theme }) => theme.colors.title};
+  font-size: 16px;
+`;
+export const Messeger = styled.Text`
+  font-family: ${({ theme }) => theme.fonts.primary_robot_bold};
+  color: ${({ theme }) => theme.colors.title};
+  font-size: 16px;
+`;

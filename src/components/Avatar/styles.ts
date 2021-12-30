@@ -33,5 +33,5 @@ export const ButtonOnline = styled.TouchableOpacity`
   background-color: #7df420;
   position: absolute;
   margin-left: 42px;
-  margin-top: 52px;
+  margin-top: 40px;
 `;

@@ -1,4 +1,5 @@
 import styled from 'styled-components/native';
+import { FlatList } from 'react-native';
 
 export const Container = styled.ScrollView`
   width: 100%;
@@ -26,3 +27,5 @@ export const WrapperCardUsers = styled.View`
 `;
 
 export const WrapperCardConversas = styled.View``;
+
+export const FlatListCard = styled(FlatList)``;

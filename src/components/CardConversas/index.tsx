@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import React from 'react';
 import {
   Container,
@@ -10,16 +11,21 @@ import ProfileSVG from '../../assets/images/profile.svg';
 import LogautSVG from '../../assets/icon/logaut.svg';
 import { Avatar } from '../Avatar';
 
-export function CardConversas() {
+interface PropsConersas {
+  name: string;
+  messeger?: string;
+}
+
+export function CardConversas({ name, messeger }: PropsConersas) {
   return (
-    <Container>
+    <Container style={{ borderBottomWidth: 1, borderBottomColor: '#cdcdcd' }}>
       <WrapperAvatar>
         <Avatar />
       </WrapperAvatar>
 
       <WrapperConversa>
-        <Name>Fabiana Pereira Sou...</Name>
-        <Messeger>Oie, tudo bem ? 17 de ago</Messeger>
+        <Name>{name}</Name>
+        <Messeger>{messeger}</Messeger>
       </WrapperConversa>
     </Container>
   );

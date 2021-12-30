@@ -10,12 +10,15 @@ import {
 import ProfileSVG from '../../assets/images/profile.svg';
 import LogautSVG from '../../assets/icon/logaut.svg';
 
-export function Profile() {
+interface PropsProfile {
+  title: string;
+}
+export function Profile({ title }: PropsProfile) {
   return (
     <Container>
       <WrapperHeader>
         <ProfileSVG width={56} height={56} />
-        <Title>Dê seu Match</Title>
+        <Title>{title}</Title>
       </WrapperHeader>
       <ButtonOnline />
 
