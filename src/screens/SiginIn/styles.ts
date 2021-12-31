@@ -15,7 +15,11 @@ export const Main = styled.View`
   padding: 24px;
 `;
 
-export const WrapperMain = styled.View``;
+export const WrapperMain = styled.View`
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+`;
 
 export const Title = styled.Text`
   font-family: ${({ theme }) => theme.fonts.primary_robot_bold};
@@ -24,6 +28,7 @@ export const Title = styled.Text`
 
   margin-bottom: 32px;
   margin-top: -40px;
+  text-align: center;
 `;
 
 export const WrapperLogo = styled.View`

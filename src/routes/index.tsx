@@ -1,12 +1,14 @@
-import React from 'react';
+/* eslint-disable prettier/prettier */
+import React, { useState } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { RoutesAuthenticate } from './authenticateRoutes';
+import { OpenRoutes } from './openRoutes';
 import { BottomTabsRoutes } from './bottomTabsRoutes';
 
 export function AppRoutes() {
+  const [user, setUser] = useState(true);
   return (
     <NavigationContainer>
-      <BottomTabsRoutes />
+      {user ? <BottomTabsRoutes /> : <OpenRoutes />}
     </NavigationContainer>
   );
 }

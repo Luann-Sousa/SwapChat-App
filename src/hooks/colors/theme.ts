@@ -10,6 +10,7 @@ export default {
     title: '#47474D',
     text: '#7A7180',
     text_datail: '#AEAEB3',
+    card_messeger: '#E3DFDF',
 
     line: '#EBEBF0',
 

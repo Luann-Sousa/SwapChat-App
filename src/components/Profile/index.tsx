@@ -17,7 +17,7 @@ export function Profile({ title }: PropsProfile) {
   return (
     <Container>
       <WrapperHeader>
-        <ProfileSVG width={56} height={56} />
+        <ProfileSVG width={50} height={50} />
         <Title>{title}</Title>
       </WrapperHeader>
       <ButtonOnline />

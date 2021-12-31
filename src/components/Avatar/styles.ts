@@ -7,6 +7,14 @@ export const WrapperHeader = styled.View`
   position: relative;
 `;
 
+export const Box = styled.View`
+  border: 3px solid #2fa8ff;
+  width: 60px;
+  height: 60px;
+
+  border-radius: 30px;
+`;
+
 export const WrapperHeaderIcon = styled.View`
   margin-top: 10px;
   width: 100px;

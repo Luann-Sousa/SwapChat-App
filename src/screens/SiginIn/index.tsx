@@ -31,7 +31,7 @@ export function SiginInScreen() {
         </WrapperMain>
 
         <WrapperLogo>
-          <LogoSVG width={150} height={150}/>
+          <LogoSVG width={150} height={150} />
         </WrapperLogo>
 
         <WrapperInput>
@@ -44,7 +44,7 @@ export function SiginInScreen() {
         </WrapperFotterButton>
 
         <WrapperFotterForgetPassword>
-          <TextForgerPassowrd>ESQUECEU A SENHA</TextForgerPassowrd>
+          <TextForgerPassowrd>ESQUECEU A SENHA?</TextForgerPassowrd>
         </WrapperFotterForgetPassword>
       </Main>
       <WrapperFooter>

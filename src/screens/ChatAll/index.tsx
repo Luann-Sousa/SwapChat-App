@@ -1,6 +1,7 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import { Text } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import {
   Container,
   ContainerMain,
@@ -10,10 +11,17 @@ import {
   FlatListCard,
 } from './styles';
 
+import ProfileSVG from '../../assets/images/profile.svg';
 import { HeaderProfile } from '../../components/HeaderProfile';
 import { SearchInput } from '../../components/SearchInput';
 import { CardUsers } from '../../components/CardUsers';
 import { CardConversas } from '../../components/CardConversas';
+import { ScreenStackParamList } from '../../routes/authenticateRoutes';
+
+type ChatAllScreenStackProps = NativeStackNavigationProp<
+  ScreenStackParamList,
+  'Messege'
+>;
 
 export function ChatAll() {
   const conversas = [
@@ -48,30 +56,34 @@ export function ChatAll() {
       mensagem: 'Colé mano, tudo bem ? 12 de jun',
     },
   ];
+  const navigation = useNavigation<ChatAllScreenStackProps>();
   return (
-    <Container>
-      <ContainerMain>
-        <HeaderProfile />
-        <WrapperSearchInput>
-          <SearchInput />
-        </WrapperSearchInput>
+    <>
+      <HeaderProfile icon={ProfileSVG} title="Bate Papo" />
+      <Container>
+        <ContainerMain>
+          <WrapperSearchInput>
+            <SearchInput />
+          </WrapperSearchInput>
 
-        <WrapperCardUsers>
-          <CardUsers name="Maria Clara Gomes" />
-          <CardUsers name="Fernanda Santos" />
-          <CardUsers name="Bernade Da Silva" />
-          <CardUsers name="Maria Isabe Kiterino" />
-        </WrapperCardUsers>
-      </ContainerMain>
-      <WrapperCardConversas>
-        {conversas.map(item => (
-          <CardConversas
-            key={item.user}
-            name={item.nome}
-            messeger={item.mensagem}
-          />
-        ))}
-      </WrapperCardConversas>
-    </Container>
+          <WrapperCardUsers>
+            <CardUsers name="Maria Clara Gomes" />
+            <CardUsers name="Fernanda Santos" />
+            <CardUsers name="Bernade Da Silva" />
+            <CardUsers name="Maria Isabe Kiterino" />
+          </WrapperCardUsers>
+        </ContainerMain>
+        <WrapperCardConversas>
+          {conversas.map(item => (
+            <CardConversas
+              onPress={() => navigation.navigate('Messege')}
+              key={item.user}
+              name={item.nome}
+              messeger={item.mensagem}
+            />
+          ))}
+        </WrapperCardConversas>
+      </Container>
+    </>
   );
 }

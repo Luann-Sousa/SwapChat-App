@@ -20,6 +20,12 @@ export const WrapperMain = styled.View`
   align-items: center;
   justify-content: center;
 `;
+export const WrapperBorder = styled.View`
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+`;
 
 export const Title = styled.Text`
   font-family: ${({ theme }) => theme.fonts.primary_robot_bold};
@@ -39,6 +45,7 @@ export const Label = styled.Text`
   color: ${({ theme }) => theme.colors.title};
 
   font-size: 14px;
+  margin-bottom: 8px;
 `;
 export const Input = styled.TextInput`
   width: 100%;
@@ -66,6 +73,6 @@ export const ImageFooter = styled.Image`
 
 export const ButtonUpload = styled.TouchableOpacity`
   position: absolute;
-  margin-top: 400px;
+  margin-top: 436px;
   right: 10px;
 `;

@@ -2,12 +2,11 @@
 /* eslint-disable no-nested-ternary */
 import * as React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { MaterialIcons } from '@expo/vector-icons';
-import FriendsSVG from '../assets/icon/friends.svg';
-import ChatbubbleSVG from '../assets/icon/chatbubble.svg';
-import { MatchScreen } from '../screens/Match';
+import { MaterialIcons, Ionicons, FontAwesome5 } from '@expo/vector-icons';
+import { View, Text } from 'react-native';
 import { FriendsScreen } from '../screens/Friends';
 import { ChatAll } from '../screens/ChatAll';
+import { RoutesAuthenticate } from '../routes/authenticateRoutes';
 
 const BottomTabs = createBottomTabNavigator();
 
@@ -20,7 +19,7 @@ export function BottomTabsRoutes() {
     >
       <BottomTabs.Screen
         name="Home"
-        component={MatchScreen}
+        component={RoutesAuthenticate}
         options={{
           tabBarIcon: ({ size, color }) => (
             <MaterialIcons name="home" size={size} color={color} />
@@ -31,7 +30,26 @@ export function BottomTabsRoutes() {
         name="Conversas"
         component={ChatAll}
         options={{
-          tabBarIcon: () => <ChatbubbleSVG width={24} height={24} />,
+          tabBarIcon: ({ size, color }) => (
+            <View>
+              <View
+                style={{
+                  width: 20,
+                  height: 20,
+                  borderRadius: 10,
+                  backgroundColor: '#ff2f4b',
+                  position: 'absolute',
+                  marginLeft: 18,
+                  marginTop: -6,
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                }}
+              >
+                <Text style={{ fontSize: 11, color: '' }}>18</Text>
+              </View>
+              <Ionicons name="chatbubble" size={size} color={color} />
+            </View>
+          ),
         }}
       />
 
@@ -39,7 +57,26 @@ export function BottomTabsRoutes() {
         name="Amigos"
         component={FriendsScreen}
         options={{
-          tabBarIcon: () => <FriendsSVG width={24} height={24} />,
+          tabBarIcon: ({ size, color }) => (
+            <View>
+              <View
+                style={{
+                  width: 20,
+                  height: 20,
+                  borderRadius: 10,
+                  backgroundColor: '#44fa1f',
+                  position: 'absolute',
+                  marginLeft: 25,
+                  marginTop: -8,
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                }}
+              >
+                <Text style={{ fontSize: 11, color: '#fff' }}>19</Text>
+              </View>
+              <FontAwesome5 name="user-friends" size={size} color={color} />
+            </View>
+          ),
         }}
       />
     </BottomTabs.Navigator>

@@ -2,7 +2,7 @@
 /* eslint-disable global-require */
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import { Box, ImageUser, Main, Title } from './styles';
+import { Main, Box, ImageUser, Title } from './styles';
 import UserSVG from '../../assets/images/jovem2.png';
 
 interface PropsName {

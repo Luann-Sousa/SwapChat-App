@@ -18,7 +18,10 @@ import {
   ImageFooter,
 } from './styles';
 
-type SigninScreenStackProps = NativeStackNavigationProp<ScreenStackParamList, 'SigninScreen'>
+type SigninScreenStackProps = NativeStackNavigationProp<
+  ScreenStackParamList,
+  'SigninScreen'
+>;
 export function LoginScreen() {
   const navigation = useNavigation<SigninScreenStackProps>();
   return (
@@ -26,24 +29,25 @@ export function LoginScreen() {
       <ImageHeader source={require('../../assets/images/header.png')} />
 
       <Main>
-
-
         <WrapperLogo>
-          <LogoSVG width={150} height={150}/>
+          <LogoSVG width={150} height={150} />
         </WrapperLogo>
 
-    <WrapperButtons>
+        <WrapperButtons>
+          <WrapperFotterButton>
+            <Buttonn
+              title="Signin in"
+              onPress={() => navigation.navigate('SigninScreen')}
+            />
+          </WrapperFotterButton>
 
-        <WrapperFotterButton>
-              <Buttonn title="Signin in" onPress={()=> navigation.navigate("SigninScreen")}/>
-        </WrapperFotterButton>
-
-        <WrapperFotterButton>
-              <Buttonn title="Signin up"  onPress={()=> navigation.navigate("SignInUpScreen")}/>
-        </WrapperFotterButton>
-    </WrapperButtons>
-
-
+          <WrapperFotterButton>
+            <Buttonn
+              title="Signin up"
+              onPress={() => navigation.navigate('SignInUpScreen')}
+            />
+          </WrapperFotterButton>
+        </WrapperButtons>
       </Main>
       <WrapperFooter>
         <ImageFooter source={require('../../assets/images/footer.png')} />

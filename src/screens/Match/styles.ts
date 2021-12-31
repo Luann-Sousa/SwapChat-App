@@ -30,6 +30,7 @@ export const ContainerOption = styled.View`
   flex-direction: row;
   justify-content: space-between;
   padding: 28px;
+  margin-top: -10px;
 `;
 export const Reload = styled.TouchableOpacity`
   border: 1px solid #cdcdcd;

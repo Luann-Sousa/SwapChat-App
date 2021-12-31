@@ -21,4 +21,6 @@ export const WrapperButtons = styled.View`
   align-items: center;
   justify-content: space-between;
 `;
-export const WrapperCardFriends = styled.View``;
+export const WrapperCardFriends = styled.View`
+  margin-top: 20px;
+`;

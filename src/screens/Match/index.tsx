@@ -1,4 +1,5 @@
 import React from 'react';
+import { FlatList } from 'react-native';
 import {
   Wrapper,
   Container,
@@ -17,8 +18,13 @@ import ReloadSVG from '../../assets/images/reload.svg';
 import CancelSVG from '../../assets/images/cancel.svg';
 import MatchlSVG from '../../assets/images/match.svg';
 import StarSVG from '../../assets/images/star.svg';
+import { ImageSlider } from '../../components/ImageSlider';
 
 export function MatchScreen() {
+  const images = [
+    'https://cdn.pixabay.com/photo/2017/06/21/01/26/model-2425679_1280.jpg',
+    'https://cdn.pixabay.com/photo/2017/06/21/01/26/model-2425679_1280.jpg',
+  ];
   return (
     <>
       <Wrapper>
