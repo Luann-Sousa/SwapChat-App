@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { FlatList } from 'react-native';
 import {
   Wrapper,
@@ -21,10 +21,8 @@ import StarSVG from '../../assets/images/star.svg';
 import { ImageSlider } from '../../components/ImageSlider';
 
 export function MatchScreen() {
-  const images = [
-    'https://cdn.pixabay.com/photo/2017/06/21/01/26/model-2425679_1280.jpg',
-    'https://cdn.pixabay.com/photo/2017/06/21/01/26/model-2425679_1280.jpg',
-  ];
+  const [users, setUsers] = useState([]);
+
   return (
     <>
       <Wrapper>
