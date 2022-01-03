@@ -25,7 +25,7 @@ import {
 
 type SignIUpScreenStackProps = NativeStackNavigationProp<
   ScreenStackParamList,
-  'Messege'
+  'HomeAuth'
 >;
 export function SignInUpScreen() {
   const navigation = useNavigation<SignIUpScreenStackProps>();
@@ -80,7 +80,7 @@ export function SignInUpScreen() {
         <WrapperFotterButton>
           <Buttonn
             title="CADASTRAR"
-            onPress={() => navigation.navigate('Messege')}
+            onPress={() => navigation.navigate('HomeAuth')}
           />
         </WrapperFotterButton>
       </Main>

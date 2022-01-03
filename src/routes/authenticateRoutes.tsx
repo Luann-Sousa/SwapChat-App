@@ -11,7 +11,7 @@ export type ScreenStackParamList = {
   SigninScreen: undefined;
   SignInUpScreen: undefined;
   Messege: undefined;
-  Home: undefined;
+  HomeAuth: undefined;
 };
 
 const Stack = createStackNavigator<ScreenStackParamList>();
@@ -24,7 +24,7 @@ export function RoutesAuthenticate() {
         headerShown: false,
       }}
     >
-      <Stack.Screen name="MatchScreen" component={FriendsScreen} />
+      <Stack.Screen name="MatchScreen" component={MatchScreen} />
       <Stack.Screen name="Messege" component={Messege} />
     </Stack.Navigator>
   );

@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import {
@@ -17,6 +17,7 @@ import { SearchInput } from '../../components/SearchInput';
 import { CardUsers } from '../../components/CardUsers';
 import { CardConversas } from '../../components/CardConversas';
 import { ScreenStackParamList } from '../../routes/authenticateRoutes';
+import { apiURL } from '../../services/api';
 
 type ChatAllScreenStackProps = NativeStackNavigationProp<
   ScreenStackParamList,
@@ -24,6 +25,8 @@ type ChatAllScreenStackProps = NativeStackNavigationProp<
 >;
 
 export function ChatAll() {
+  const [data, setData] = useState([]);
+
   const conversas = [
     {
       user: 1,
@@ -56,6 +59,17 @@ export function ChatAll() {
       mensagem: 'Colé mano, tudo bem ? 12 de jun',
     },
   ];
+
+  async function Users() {
+    console.log('passei');
+    await apiURL
+      .get('/users')
+      .then(response => console.log(response.data))
+      .catch(error => console.log('error'));
+  }
+  useEffect(() => {
+    Users();
+  }, []);
   const navigation = useNavigation<ChatAllScreenStackProps>();
   return (
     <>

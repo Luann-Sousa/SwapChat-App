@@ -5,7 +5,7 @@ import { OpenRoutes } from './openRoutes';
 import { BottomTabsRoutes } from './bottomTabsRoutes';
 
 export function AppRoutes() {
-  const [user, setUser] = useState(true);
+  const [user, setUser] = useState(false);
   return (
     <NavigationContainer>
       {user ? <BottomTabsRoutes /> : <OpenRoutes />}

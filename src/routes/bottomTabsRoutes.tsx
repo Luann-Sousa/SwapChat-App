@@ -45,7 +45,7 @@ export function BottomTabsRoutes() {
                   justifyContent: 'center',
                 }}
               >
-                <Text style={{ fontSize: 11, color: '' }}>18</Text>
+                <Text style={{ fontSize: 11, color: '#fff' }}>18</Text>
               </View>
               <Ionicons name="chatbubble" size={size} color={color} />
             </View>
