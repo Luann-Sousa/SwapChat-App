@@ -17,8 +17,16 @@ export const ContainerImageMacth = styled.View`
   width: 100%;
   border-radius: 10px;
 `;
+
+export const CardMacth = styled.TouchableOpacity`
+  width: 400px;
+  border-radius: 10px;
+  height: 520px;
+  margin-top: 10px;
+`;
+
 export const ImageMacth = styled.Image`
-  width: 100%;
+  width: 400px;
   border-radius: 10px;
   height: 520px;
   margin-top: 10px;
@@ -57,18 +65,21 @@ export const Title = styled.Text`
   font-weight: bold;
   font-size: 28px;
   color: #fff;
-  margin-right: 40px;
+`;
+export const TitleBirth = styled.Text`
+  font-family: 'Roboto';
+  font-weight: bold;
+  font-size: 28px;
+  color: #fff;
 `;
 
 export const SubTitle = styled.Text`
+  width: 80%;
   font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 300;
-  font-size: 16px;
+  font-weight: normal;
+  font-size: 18px;
   color: #fff;
   margin-right: 40px;
-  line-height: 21px;
-  width: 250px;
 `;
 
 export const WrapperLegend = styled.View`
@@ -76,4 +87,12 @@ export const WrapperLegend = styled.View`
   margin-top: 400px;
   padding: 12px;
   width: 100%;
+`;
+export const WrapperDateBirth = styled.View`
+  /* position: absolute;
+  margin-top: 400px;
+  padding: 12px; */
+  width: 100%;
+  flex-direction: row;
+  margin-left: -10px;
 `;

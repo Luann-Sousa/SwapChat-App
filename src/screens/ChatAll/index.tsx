@@ -61,7 +61,6 @@ export function ChatAll() {
   ];
 
   async function Users() {
-    console.log('passei');
     await apiURL
       .get('/users')
       .then(response => console.log(response.data))

@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import { FlatList } from 'react-native';
+import { FlatList, Text } from 'react-native';
+import { apiURL } from '../../services/api';
 import {
   Wrapper,
   Container,
   Title,
+  TitleBirth,
   SubTitle,
   WrapperLegend,
+  WrapperDateBirth,
   ContainerImageMacth,
+  CardMacth,
   ImageMacth,
   ContainerOption,
   Reload,
@@ -19,9 +23,20 @@ import CancelSVG from '../../assets/images/cancel.svg';
 import MatchlSVG from '../../assets/images/match.svg';
 import StarSVG from '../../assets/images/star.svg';
 import { ImageSlider } from '../../components/ImageSlider';
+import { IUserProps } from '../../DTOS/user';
 
 export function MatchScreen() {
-  const [users, setUsers] = useState([]);
+  const [users, setUsers] = useState<IUserProps>({} as IUserProps);
+
+  async function handleUsers() {
+    await apiURL
+      .get('/users')
+      .then(response => setUsers(response.data))
+      .catch(error => console.log('error'));
+  }
+  useEffect(() => {
+    handleUsers();
+  }, []);
 
   return (
     <>
@@ -29,12 +44,28 @@ export function MatchScreen() {
         <Profile title="Dê seu Match" />
         <Container showsVerticalScrollIndicator={false}>
           <ContainerImageMacth>
-            <ImageMacth source={JovenProfileSVG} />
+            <FlatList
+              contentContainerStyle={{
+                padding: 12,
+                marginTop: 10,
+              }}
+              horizontal
+              data={users.users}
+              keyExtractor={user => user.id}
+              renderItem={user => (
+                <CardMacth activeOpacity={0.8}>
+                  <ImageMacth source={{ uri: user.item.photo }} />
+                  <WrapperLegend>
+                    <WrapperDateBirth>
+                      <Title> {user.item.name},</Title>
+                      <TitleBirth>17</TitleBirth>
+                    </WrapperDateBirth>
 
-            <WrapperLegend>
-              <Title>Priscilla, 24</Title>
-              <SubTitle>Consultora em atendimento Veterinario.</SubTitle>
-            </WrapperLegend>
+                    <SubTitle>{user.item.profession}</SubTitle>
+                  </WrapperLegend>
+                </CardMacth>
+              )}
+            />
           </ContainerImageMacth>
 
           <ContainerOption>
