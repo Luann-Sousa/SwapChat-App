@@ -27,7 +27,7 @@ import { IUserProps } from '../../DTOS/user';
 
 export function MatchScreen() {
   const [users, setUsers] = useState<IUserProps>({} as IUserProps);
-  console.log(users);
+  // console.log(users);
   async function handleUsers() {
     await apiURL
       .get('/users')
@@ -48,10 +48,10 @@ export function MatchScreen() {
           <ContainerImageMacth>
             <FlatList
               contentContainerStyle={{
-                padding: 12,
-                marginTop: 10,
+                paddingLeft: 10,
               }}
               horizontal
+              pagingEnabled
               data={users.users}
               keyExtractor={user => user.id}
               renderItem={user => (

@@ -21,12 +21,12 @@ export const ContainerImageMacth = styled.View`
 export const CardMacth = styled.TouchableOpacity`
   width: 400px;
   border-radius: 10px;
-  height: 520px;
+  height: 500px;
   margin-top: 10px;
 `;
 
 export const ImageMacth = styled.Image`
-  width: 400px;
+  width: 370px;
   border-radius: 10px;
   height: 520px;
   margin-top: 10px;
@@ -38,7 +38,7 @@ export const ContainerOption = styled.View`
   flex-direction: row;
   justify-content: space-between;
   padding: 28px;
-  margin-top: -10px;
+  margin-top: -6px;
 `;
 export const Reload = styled.TouchableOpacity`
   border: 1px solid #cdcdcd;
