@@ -16,7 +16,7 @@ export const Title = styled.Text`
 `;
 
 export const WrapperMesserTo = styled.View`
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 `;
 
 export const WrapperMesserMe = styled.View`
@@ -60,3 +60,43 @@ export const Content = styled.ScrollView.attrs({
   },
   showsVerticalScrollIndicator: false,
 })``;
+
+export const LineMessageMe = styled.View`
+  margin: 10px 0 10px 0;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-end;
+`;
+export const BoxImage = styled.View``;
+export const BoxMessageMe = styled.View`
+  background: #95989a;
+  padding: 15px;
+  width: 60%;
+  border-radius: 8px;
+  margin-right: 0;
+  position: relative;
+`;
+export const BoxMessageMeText = styled.Text`
+  line-height: 20px;
+  font-size: 14px;
+  color: #ffffff;
+`;
+
+export const LineMessageHe = styled.View`
+  margin: 10px 0 10px 0;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+`;
+export const BoxMessageHe = styled.View`
+  background: #dddddd;
+  padding: 15px;
+  width: 60%;
+  border-radius: 8px;
+  margin-left: 0px;
+`;
+export const BoxMessageHeText = styled.Text`
+  line-height: 20px;
+  font-size: 14px;
+  color: #707070;
+`;

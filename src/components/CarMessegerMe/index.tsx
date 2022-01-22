@@ -3,13 +3,15 @@ import React from 'react';
 import { Container, Title, ContainerMessege } from './styles';
 import ProfileSVG from '../../assets/images/jovem2.svg';
 
-export function CarMessegeMe() {
+interface ICarMesseger {
+  messeger: string;
+}
+
+export function CarMessegeMe({ messeger }: ICarMesseger) {
   return (
     <Container>
       <ContainerMessege>
-        <Title>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias facilis
-        </Title>
+        <Title>{messeger}</Title>
       </ContainerMessege>
       <ProfileSVG width={34} height={34} />
     </Container>

@@ -5,12 +5,13 @@ import { LoginScreen } from '../screens/Login';
 import { MatchScreen } from '../screens/Match';
 import { Messege } from '../screens/Messege';
 import { BottomTabsRoutes } from './bottomTabsRoutes';
+import { IMessegerProps } from '../DTOS/messeger';
 
 export type ScreenStackParamList = {
   MatchScreen: undefined;
   SigninScreen: undefined;
   SignInUpScreen: undefined;
-  Messege: undefined;
+  Messege: { data: IMessegerProps };
   HomeAuth: undefined;
 };
 

@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { Text } from 'react-native';
 import {
   Container,
   ContainerMain,
@@ -18,6 +19,7 @@ import { CardUsers } from '../../components/CardUsers';
 import { CardConversas } from '../../components/CardConversas';
 import { ScreenStackParamList } from '../../routes/authenticateRoutes';
 import { apiURL } from '../../services/api';
+import { IMessegerProps } from '../../DTOS/messeger';
 
 type ChatAllScreenStackProps = NativeStackNavigationProp<
   ScreenStackParamList,
@@ -25,8 +27,8 @@ type ChatAllScreenStackProps = NativeStackNavigationProp<
 >;
 
 export function ChatAll() {
-  const [data, setData] = useState([]);
-
+  const [messege, setMesseger] = useState<IMessegerProps>({} as IMessegerProps);
+  console.log(messege.messegens);
   const conversas = [
     {
       user: 1,
@@ -62,8 +64,8 @@ export function ChatAll() {
 
   async function Users() {
     await apiURL
-      .get('/users')
-      .then(response => console.log(response.data))
+      .get('/messegens/one/36cb4857-c806-4688-8a79-65fbdb3be395')
+      .then(response => setMesseger(response.data))
       .catch(error => console.log('error'));
   }
   useEffect(() => {
@@ -87,12 +89,12 @@ export function ChatAll() {
           </WrapperCardUsers>
         </ContainerMain>
         <WrapperCardConversas>
-          {conversas.map(item => (
+          {messege?.messegens?.map(item => (
             <CardConversas
-              onPress={() => navigation.navigate('Messege')}
-              key={item.user}
-              name={item.nome}
-              messeger={item.mensagem}
+              onPress={() => navigation.navigate('Messege', { data: messege })}
+              key={item.id}
+              name={item.user?.name}
+              messeger={item.messeger}
             />
           ))}
         </WrapperCardConversas>

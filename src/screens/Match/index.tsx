@@ -27,11 +27,13 @@ import { IUserProps } from '../../DTOS/user';
 
 export function MatchScreen() {
   const [users, setUsers] = useState<IUserProps>({} as IUserProps);
-
+  console.log(users);
   async function handleUsers() {
     await apiURL
       .get('/users')
-      .then(response => setUsers(response.data))
+      .then(response => {
+        setUsers(response.data);
+      })
       .catch(error => console.log('error'));
   }
   useEffect(() => {
