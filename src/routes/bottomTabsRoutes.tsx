@@ -2,7 +2,12 @@
 /* eslint-disable no-nested-ternary */
 import * as React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { MaterialIcons, Ionicons, FontAwesome5 } from '@expo/vector-icons';
+import {
+  MaterialIcons,
+  Ionicons,
+  FontAwesome5,
+  AntDesign,
+} from '@expo/vector-icons';
 import { View, Text } from 'react-native';
 import { FriendsScreen } from '../screens/Friends';
 import { ChatAll } from '../screens/ChatAll';
@@ -22,7 +27,7 @@ export function BottomTabsRoutes() {
         component={RoutesAuthenticate}
         options={{
           tabBarIcon: ({ size, color }) => (
-            <MaterialIcons name="home" size={size} color={color} />
+            <Ionicons name="heart-circle" size={size} color={color} />
           ),
         }}
       />
@@ -34,8 +39,8 @@ export function BottomTabsRoutes() {
             <View>
               <View
                 style={{
-                  width: 20,
-                  height: 20,
+                  width: 15,
+                  height: 15,
                   borderRadius: 10,
                   backgroundColor: '#ff2f4b',
                   position: 'absolute',
@@ -45,9 +50,9 @@ export function BottomTabsRoutes() {
                   justifyContent: 'center',
                 }}
               >
-                <Text style={{ fontSize: 11, color: '#fff' }}>18</Text>
+                <Text style={{ fontSize: 8, color: '#fff' }}>18</Text>
               </View>
-              <Ionicons name="chatbubble" size={size} color={color} />
+              <MaterialIcons name="chat" size={size} color={color} />
             </View>
           ),
         }}
@@ -61,21 +66,31 @@ export function BottomTabsRoutes() {
             <View>
               <View
                 style={{
-                  width: 20,
-                  height: 20,
+                  width: 15,
+                  height: 15,
                   borderRadius: 10,
                   backgroundColor: '#44fa1f',
                   position: 'absolute',
                   marginLeft: 25,
-                  marginTop: -8,
+                  marginTop: -7,
                   alignItems: 'center',
                   justifyContent: 'center',
                 }}
               >
-                <Text style={{ fontSize: 11, color: '#fff' }}>19</Text>
+                <Text style={{ fontSize: 8, color: '#fff' }}>19</Text>
               </View>
               <FontAwesome5 name="user-friends" size={size} color={color} />
             </View>
+          ),
+        }}
+      />
+
+      <BottomTabs.Screen
+        name="Logout"
+        component={RoutesAuthenticate}
+        options={{
+          tabBarIcon: ({ size, color }) => (
+            <AntDesign name="poweroff" size={size} color={color} />
           ),
         }}
       />
