@@ -28,7 +28,7 @@ type ChatAllScreenStackProps = NativeStackNavigationProp<
 
 export function ChatAll() {
   const [messege, setMesseger] = useState<IMessegerProps>({} as IMessegerProps);
-  console.log(messege.messegens);
+  // console.log(messege.messegens);
   const conversas = [
     {
       user: 1,
@@ -64,7 +64,7 @@ export function ChatAll() {
 
   async function Users() {
     await apiURL
-      .get('/messegens/one/36cb4857-c806-4688-8a79-65fbdb3be395')
+      .get('/messegens')
       .then(response => setMesseger(response.data))
       .catch(error => console.log('error'));
   }
@@ -95,6 +95,7 @@ export function ChatAll() {
               key={item.id}
               name={item.user?.name}
               messeger={item.messeger}
+              Uri={item?.user?.photo}
             />
           ))}
         </WrapperCardConversas>

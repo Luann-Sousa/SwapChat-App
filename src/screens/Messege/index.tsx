@@ -1,3 +1,4 @@
+/* eslint-disable no-self-compare */
 /* eslint-disable no-var */
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @typescript-eslint/no-shadow */
@@ -56,33 +57,30 @@ interface PropsProfile {
 }
 
 export function Messege({ title }: PropsProfile) {
-  // const route = useRoute();
-  // const = route.params as IMessegerProps;
-  const [listMSG, setListMSG] = useState([]);
-  const [messeger, setMesseger] = useState({});
+  const [messeger_to, setMessegerTo] = useState(false);
+  const [messeger_digit, setMessegerDigit] = useState('');
+  const [resultmesseger, setResultmesseger] = useState('');
 
-  useEffect(() => {
-    const groupedList = Object.values(
-      groupBy(messageList, function (n) {
-        return n.createdAt.substring(0, 10);
-      }),
-    );
+  const [messeger, setMesseger] = useState([]);
 
-    var data = [];
-    groupedList.map(dia => {
-      var section = {
-        title: new Date(dia[0].createdAt),
-        data: [...dia],
-      };
-
-      data.push(section);
-    });
-    setListMSG(data);
-  }, []);
-
-  function renderMSG(item) {
-    return <Text>{item.messege}</Text>;
+  function handleEnviaMesseger() {
+    const teste = messeger_digit;
+    setResultmesseger(teste);
+    setMessegerTo(true);
+    console.log('oi', messeger);
   }
+
+  async function handleMessegens() {
+    await apiURL
+      .get(
+        '/messegens/one/dfd81ab9-729f-42b7-b4d9-552830d9455a/4a9c1ef6-cca6-4804-9396-590bbeb25738',
+      )
+      .then(response => setMesseger(response.data))
+      .catch(error => console.log('error', error));
+  }
+  useEffect(() => {
+    handleMessegens();
+  }, []);
 
   return (
     <>
@@ -98,22 +96,37 @@ export function Messege({ title }: PropsProfile) {
       />
 
       <Content>
-        <Title>kk</Title>
-        <SectionList
-          sections={listMSG}
-          keyExtractor={({ item }) => String(item?.id)}
-          renderItem={({ item }) => renderMSG(item)}
-          renderSectionHeader={({ section: { title } }) => <Text>{title}</Text>}
+        <FlatList
+          data={messeger?.messengens_me}
+          keyExtractor={item => String(item.id)}
+          renderItem={({ item }) => (
+            <>
+              <WrapperMesserTo>
+                <BoxMessageMe>
+                  <Text>{item?.messeger}</Text>
+                </BoxMessageMe>
+              </WrapperMesserTo>
+
+              <WrapperMesserMe>
+                <BoxMessageHe>
+                  <BoxMessageMeText>{item?.messeger}</BoxMessageMeText>
+                </BoxMessageHe>
+              </WrapperMesserMe>
+            </>
+          )}
         />
       </Content>
 
       <KeyboardAvoidingView enabled={Platform.OS === 'ios'}>
         <WrapperButtonSend>
           <WrapperInputMesseger>
-            <MessegerInput placeholder="Mensagem" />
+            <MessegerInput
+              placeholder="Mensagem"
+              onChangeText={text => setMessegerDigit(text)}
+            />
           </WrapperInputMesseger>
 
-          <ButtonIcon>
+          <ButtonIcon onPress={() => handleEnviaMesseger()}>
             <Ionicons name="arrow-forward-sharp" size={28} color="#2FA8FF" />
           </ButtonIcon>
         </WrapperButtonSend>

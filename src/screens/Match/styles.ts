@@ -26,7 +26,7 @@ export const CardMacth = styled.TouchableOpacity`
 `;
 
 export const ImageMacth = styled.Image`
-  width: 370px;
+  width: 100%;
   border-radius: 10px;
   height: 520px;
   margin-top: 10px;

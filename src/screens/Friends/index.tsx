@@ -1,8 +1,10 @@
-import React from 'react';
+/* eslint-disable prettier/prettier */
+import React, { useState, useEffect } from 'react';
 import { StatusBar } from 'react-native';
 import { BoxButton } from '../../components/BoxButton';
 import { CardConversas } from '../../components/CardConversas';
 import { Profile } from '../../components/Profile';
+import { apiURL } from '../../services/api';
 import {
   Container,
   ContainerMain,
@@ -13,38 +15,18 @@ import {
 } from './styles';
 
 export function FriendsScreen() {
-  const friends = [
-    {
-      user: 1,
-      nome: 'Luann Sousa',
-      mensagem: 'Oi, tudo bem ? 17 de ago',
-    },
-    {
-      user: 2,
-      nome: 'Maria Aparecida de Je...',
-      mensagem: 'Oi, tudo bem ? 17 de ago',
-    },
-    {
-      user: 3,
-      nome: 'Carlos Henrrique',
-      mensagem: 'eai cara como está ? 31 de out',
-    },
-    {
-      user: 4,
-      nome: 'Amelia de Barros',
-      mensagem: 'passa aqui depois, tudo bem ? 2 de jan',
-    },
-    {
-      user: 5,
-      nome: 'Pedro Rocha Li...',
-      mensagem: 'Colé mano, tudo bem ? 12 de jun',
-    },
-    {
-      user: 6,
-      nome: 'Pedro Rocha Li...',
-      mensagem: 'Colé mano, tudo bem ? 12 de jun',
-    },
-  ];
+  const [amigos, setAmigo] = useState([]);
+  // console.log('amigos', amigos?.friends.length);
+
+  async function handleFriends() {
+    await apiURL
+      .get('/friends/4a9c1ef6-cca6-4804-9396-590bbeb25738')
+      .then(response => setAmigo(response.data))
+      .catch(error => console.log('error', error));
+  }
+  useEffect(() => {
+    handleFriends();
+  }, []);
   return (
     <Container>
       <StatusBar barStyle="dark-content" />
@@ -58,8 +40,12 @@ export function FriendsScreen() {
       </ContainerMain>
 
       <WrapperCardFriends>
-        {friends.map(item => (
-          <CardConversas key={item.user} name={item.nome} />
+        {amigos.friends?.map(item => (
+          <CardConversas
+            key={item.id}
+            name={item?.user?.name}
+            Uri={item?.user?.photo}
+          />
         ))}
       </WrapperCardFriends>
 

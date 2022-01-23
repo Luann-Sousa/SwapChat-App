@@ -21,6 +21,8 @@ export const WrapperMesserTo = styled.View`
 
 export const WrapperMesserMe = styled.View`
   margin-bottom: 20px;
+  justify-content: flex-end;
+  align-items: flex-end;
 `;
 export const Main = styled.View`
   width: 100%;
@@ -57,6 +59,7 @@ export const ButtonIcon = styled.TouchableOpacity`
 export const Content = styled.ScrollView.attrs({
   contentContainerStyle: {
     marginBottom: 50,
+    padding: 24,
   },
   showsVerticalScrollIndicator: false,
 })``;

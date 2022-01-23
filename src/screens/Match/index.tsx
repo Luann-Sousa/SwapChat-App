@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FlatList, Text } from 'react-native';
+import { FlatList, Dimensions } from 'react-native';
 import { apiURL } from '../../services/api';
 import {
   Wrapper,
@@ -25,6 +25,7 @@ import StarSVG from '../../assets/images/star.svg';
 import { ImageSlider } from '../../components/ImageSlider';
 import { IUserProps } from '../../DTOS/user';
 
+const { width } = Dimensions.get('window');
 export function MatchScreen() {
   const [users, setUsers] = useState<IUserProps>({} as IUserProps);
   // console.log(users);
@@ -47,9 +48,6 @@ export function MatchScreen() {
         <Container showsVerticalScrollIndicator={false}>
           <ContainerImageMacth>
             <FlatList
-              contentContainerStyle={{
-                paddingLeft: 10,
-              }}
               horizontal
               pagingEnabled
               data={users.users}
